@@ -1,0 +1,6 @@
+/node_modules
+/vendor
+/.idea
+/.vagrant
+.DS_Store
+.idea

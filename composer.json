@@ -1,0 +1,33 @@
+{
+    "name"              : "cswiley/laravel-content-block-cms",
+    "description"       : "Simple content block based cms package for laravel",
+    "license"           : "MIT",
+    "authors"           : [
+        {
+            "name"  : "cam wiley",
+            "email" : "cswiley1@gmail.com"
+        }
+    ],
+    "require"           : {
+        "laravel/framework"      : ">=5.5.0",
+        "php"                    : ">=7.0.0",
+        "laravel/tinker"         : "~1.0",
+        "laravelcollective/html" : "^5.5"
+    },
+    "autoload"          : {
+        "psr-4" : {
+            "Cswiley\\Cms\\" : "src"
+        }
+    },
+    "extra"             : {
+        "laravel" : {
+            "providers" : [
+                "Cswiley\\Cms\\CmsServiceProvider"
+            ],
+            "aliases"   : {
+                "Cms" : "Cswiley\\Cms\\Cms"
+            }
+        }
+    },
+    "minimum-stability" : "dev"
+}

@@ -1,0 +1,40 @@
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
+
+// require('foundation');
+window.Vue = require('vue');
+window.$ = require('jquery');
+require('lodash');
+require('foundation-sites');
+
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+// Vue.component('cms-json', require('./components/CmsJson'));
+Vue.component('cms-textarea', require('./components/CmsTextarea'));
+Vue.component('cms-viewer', require('./components/CmsViewer'));
+
+new Vue({
+    el  : '#myApp',
+    data : {}
+});
+
+// Required for laravel ajax calls
+
+function bindFoundation() {
+    $(document).foundation();
+    $(document).trigger('foundationLoaded');
+}
+
+function init() {
+    // ajaxCsrfSetup();
+    bindFoundation();
+}
+
+init();
+
